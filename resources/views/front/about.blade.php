@@ -15,7 +15,7 @@
                 <span class="typing-2 font-3"></span>
                 <br>
                 <span class="font-2">
-                    Salam , mənim adım Babayev Əlidir.18 yaşındayam.Azərbaycan Dövlət Neft və Sənaye Üniversitetinin İTİF fakültəsinin Kompüter mühəndisliyi(əyani) ixtisasını oxuyuram.Məktəb illərindən İT sahəsinə maraqlarım olub.2016 -ci ildən İnternet üzərindən Web developer sahəsi üzrə özümü inkişaf etdirməyə çalışmışam.Bəzi layihələrdə şəxsən iştirak etmişəm.Daim yeniliklərə açığam və özümü inkişaf etdirməyə çalışıram.Bu saytı İT biliklərimi bir növ subut etmək üçün hazırlamışam. <a href="{{route('skills')}}">Bacarıqlarım</a> ' a tıklayaraq hansı texnologiyalar üzərində çalışdığım hakkında məlumat öyrənə bilərsiniz.
+                    {!!$configs['about']!!}
                 </span> <br>
                 <div class="col-12 row mx-0 justify-content-center justify-content-lg-start">
                 <button class="btn btn-success mt-4 px-3">CV YÜKLƏ!</button>

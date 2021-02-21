@@ -92,6 +92,24 @@ footer{
 .content-text{
     font-size: 14px;
 }
+.post-view .col-12 .div-img{
+ width: 100%;
+ height: 500px;
+}
+.post-view{
+    padding: 20px 300px;
+}
+.post-view .post-title{
+    /* padding: 20px 300px; */
+    font-size: 35px;
+    font-weight: bold;
+}
+.post-view .post-content{
+    /* padding: 20px 300px; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    word-break: break-all;
+}
 @media only screen and (max-width: 1200px) {
     .blog{
         padding: 30px 20px;

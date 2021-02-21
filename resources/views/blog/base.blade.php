@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="loader">
+    {{-- <div class="loader">
         <div class="back"></div>
         <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;opacity:1 !important;" role="status">
             <span class="sr-only">Loading...</span>
@@ -28,7 +28,7 @@
         <div class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="wrapper">

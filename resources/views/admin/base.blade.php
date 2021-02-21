@@ -58,8 +58,14 @@
             </div>
 
             <div class="sidebar-items">
-                <a class="sidebar-item  {{ (request()->is('admin/configs')) ? 'active' : '' }}">
+                <a href="{{route('configs')}}" class="sidebar-item  {{ (request()->is('admin/configs')) ? 'active' : '' }}">
                     <i class="fas fa-cog"></i> configs
+                </a>
+            </div>
+
+            <div class="sidebar-items">
+                <a href="{{route('messages')}}" class="sidebar-item  {{ (request()->is('admin/messages')) ? 'active' : '' }}">
+                    <i class="fas fa-envelope"></i> messages
                 </a>
             </div>
             <div class="sidebar-items">

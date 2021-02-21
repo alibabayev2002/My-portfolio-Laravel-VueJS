@@ -6,11 +6,11 @@ use App\Http\Controllers\Front\MainController;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\Admin\ConfigController;
 use App\Http\Controllers\Admin\FontController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SkillController;
-use App\Http\Controllers\FontController as ControllersFontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,11 @@ Route::get('/about',[MainController::class,'about'])->name('about');
 Route::get('/projects',[MainController::class,'projects'])->name('projects');
 Route::get('/skills',[MainController::class,'skills'])->name('skills');
 Route::get('/contact',[MainController::class,'contact'])->name('contact');
+Route::post('/message/send',[MainController::class,'sendMessage'])->name('send.message');
+
+
 Route::get('/blog',[BlogController::class,'index'])->name('blog');
+Route::get('/post/{slug}',[BlogController::class,'post'])->name('view.post');
 
 Route::get('/admin/login',[AdminController::class,'showLogin'])->name('login');
 Route::post('/admin/login',[AdminController::class,'login'])->name('admin.login.post');
@@ -59,5 +63,10 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/skills',[SkillController::class,'index'])->name('admin.skills');
     Route::post('/skill/add',[SkillController::class,'addSkill'])->name('add.skill');
     Route::post('/skill/delete',[SkillController::class,'deleteSkill'])->name('delete.skill');
+
+    Route::get('/configs',[ConfigController::class,'index'])->name('configs');
+    Route::post('/configs',[ConfigController::class,'save'])->name('configs.save');
+
+    Route::get('/messages',[AdminController::class,'messages'])->name('messages');
 });
 

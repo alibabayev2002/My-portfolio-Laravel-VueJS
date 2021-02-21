@@ -11,43 +11,45 @@
                         <table>
                             <tr>
                                 <td><i class="fas fa-user text-danger"></i></td>
-                                <td>Babayev Əli</td>
+                                <td>{{$configs['full_name']}}</td>
                             </tr>
                             <tr>
                                 <td><i class="fas fa-address-card text-danger"></i></td>
-                                <td>Bakı , Azərbaycan</td>
+                                <td>{{$configs['address']}}</td>
                             </tr>
                             <tr>
                                 <td><i class="fas fa-envelope text-danger"></i></i></td>
-                                <td>ali.babayev.655.19@gmail.com</td>
+                                <td>{{$configs['email']}}</td>
                             </tr>
                             <tr>
                                 <td><i class="fab fa-github text-danger"></i></i></td>
-                                <td>alibabayev2002</td>
+                                <td>{{$configs['github']}}</td>
                             </tr>
                             <tr>
                                 <td><i class="fab fa-instagram text-danger"></i></td>
-                                <td>bhabhayef</td>
+                                <td>{{$configs['instagram']}}</td>
                             </tr>
                             <tr>
                                 <td><i class="fab fa-whatsapp text-danger"></i></td>
-                                <td>+994 (50) 872 85 90</td>
+                                <td>{{$configs['whatsapp']}}</td>
                             </tr>
                         </table>
                     </div>
-                <div class="col-md-6 col-12 row mx-0 justify-content-md-end justify-content-start mt-md-0 mt-5 align-items-center">
-
+                <div class="col-md-6 col-12 row mx-0">
+                    <form action="{{route('send.message')}}" method="post" class="row mx-0 justify-content-md-end justify-content-start mt-md-0 mt-5 align-items-center w-100">
+@csrf
                     <table class="w-50">
                         <tr>
                             <td class="font-2">Bizə mesaj göndər</td>
                         </tr>
                         <tr>
-                            <td><input class="form-control" type="text" placeholder="Email"></td>
+                            <td><input class="form-control" name="email" type="text" placeholder="Email"></td>
                         </tr>
-                        <tr><td><textarea class="form-control" placeholder="Mesajınız"></textarea></td></tr>
+                        <tr><td><textarea class="form-control" name="message" placeholder="Mesajınız"></textarea></td></tr>
                         <tr>
-                            <td><button class="btn btn-danger">GONDER</button></td>
+                            <td><button type="submit" class="btn btn-danger">GONDER</button></td>
                         </tr>
+                    </form>
                     </table>
                 </div>
             </div>

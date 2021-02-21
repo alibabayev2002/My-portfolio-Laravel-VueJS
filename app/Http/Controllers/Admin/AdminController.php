@@ -9,6 +9,7 @@ use App\Models\Page;
 use App\Models\Font;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Message;
 
 class AdminController extends Controller
 {
@@ -31,6 +32,10 @@ class AdminController extends Controller
     public function dashboard(){
         $data = ['posts'=>count(Post::get()),'categories'=>count(Category::get())];
         return view('admin.dashboard',$data);
+    }
+    public function messages(){
+        $data = ['messages'=>Message::get()];
+        return view('admin.messages',$data);
     }
     public function logout(){
         Auth::logout();
