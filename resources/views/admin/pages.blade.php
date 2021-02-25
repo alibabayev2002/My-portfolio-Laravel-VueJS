@@ -7,7 +7,7 @@
         <button class="btn btn-success mb-3 form-control" onclick="addPage($('.page').val(),$('.page-route').val())">Add
             page</button>
     </div>
-    <table id="table_id" class="display w-100">
+    <table id="table_id test-table" class="display w-100">
         <thead>
             <tr>
                 <th>id</th>
