@@ -3,7 +3,7 @@
 
 <div class="skills-content section row mx-0  ">
     <div class="section-content bg-white py-1">
-        <h1 class="title font-3 text-primary mb-4">IT Bacarıqlarım</h1>
+        <h1 class="title font-3 text-primary mb-4">Bacarıqlarım</h1>
         <div class="content row mx-0 w-100">
             <div class="col-md-7 col-12 row mx-0  align-items-center mb-5">
                 <div class="col-12">
@@ -40,3 +40,4 @@
 
 </div>
 @endsection
+

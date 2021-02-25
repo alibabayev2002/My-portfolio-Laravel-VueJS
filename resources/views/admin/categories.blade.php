@@ -61,17 +61,20 @@
 
     const deleteCategory = (id) => {
         $.post("{{route('delete.category')}}",{_token:'{{csrf_token()}}',id:id},function(data){
-            alert("Silindi!");
+            // alert("Silindi!");
+            $(`tr.${id}`).html('');
         });
     }
     const addCategory = (name) => {
         $.get("{{route('add.category')}}",{_token:'{{csrf_token()}}',name:name},function(data){
             $('tbody').append(`
-            <tr>
-                <td>-</td>
+            <tr class="${data['id']}">
+                <td>${data['id']}</td>
                 <td>${name}</td>
                 <td>0</td>
-                <td>Saved...</td>
+                <td class="four row mx-0 justify-content-center"><button data-toggle="modal" onclick="editCategoryModal(${data['id']},${name})" data-target="#categoryModal" class="btn btn-success mr-1" href=""><i
+                            class="fas fa-pencil-alt"></i></button><button onclick="deleteCategory(${data['id']})" class="btn btn-danger href=""><i
+                            class="fas fa-trash"></i></button></td>
             </tr>
             `)
         });

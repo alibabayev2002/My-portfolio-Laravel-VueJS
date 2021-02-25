@@ -35,6 +35,8 @@ class CategoriesController extends Controller
         $category->name=$request->name;
         $category->slug= Str::of($request->name)->slug('-');
         $category->save();
+        $data = ['id'=>$category->id];
+        return $data;
         // DB::table('categories')->insert(['name'=>$request->name,'slug'=>Str::of($request->name)->slug('-')]);
     }
     public function editCategory(Request $request){

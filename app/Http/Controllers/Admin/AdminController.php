@@ -20,14 +20,9 @@ class AdminController extends Controller
         $username = $request->username;
         $password = $request->password;
         if (Auth::attempt(['username' => $username, 'password' => $password])) {
-            // return "oldu";
             return redirect()->route('admin.home');
-            // return Auth::user()->username;
-        }else{
-            // return back();
-            // return "olmade";
         }
-        return "salam";
+        return redirect()->route('login',['test'=>'salam']);
     }
     public function dashboard(){
         $data = ['posts'=>count(Post::get()),'categories'=>count(Category::get())];

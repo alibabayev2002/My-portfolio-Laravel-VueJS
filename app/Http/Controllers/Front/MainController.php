@@ -7,6 +7,7 @@ use App\Models\Page;
 use App\Models\Skill;
 use App\Models\Config;
 use App\Models\Message;
+use App\Http\Requests\MessageRequest;
 
 use Illuminate\Http\Request;
 
@@ -38,7 +39,7 @@ class MainController extends Controller
         $this->data['configs'] = Config::first();
         return view('front.contact',$this->data);
     }
-    public function sendMessage(Request $request){
+    public function sendMessage(MessageRequest $request){
         Message::insert(['email'=>$request->email,'message'=>$request->message]);
         return back();
         // $this->data['configs'] = Config::first();

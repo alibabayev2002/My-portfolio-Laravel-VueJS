@@ -20,7 +20,9 @@ class PageController extends Controller
         $page->route_name=$request->route;
         $page->icon = "null";
         $page->save();
-        return true;
+        $id = $page->id;
+        $data = ['id'=>$id,'route'=>$request->route];
+        return $data;
     }
     public function editPage(Request $request){
         $page = Page::where('id',$request->id)->first();

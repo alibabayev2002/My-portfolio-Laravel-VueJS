@@ -39,10 +39,12 @@
         }, function (data) {
             if (data) {
                 $('tbody').append(`
-                    <td>null</td>
+                <tr class="${data}">
+                    <td>${data}</td>
                     <td>${name}</td>
                     <td>${level}%</td>
-                    <td>Saved..</td>
+                    <td><button class="btn btn-danger" onclick="deleteSkill(${data})">Delete</button></td>
+                </tr>
                 `)
             }
         });
@@ -53,7 +55,7 @@
             id: id,
         }, function (data) {
             if (data) {
-                $(`.${id}`).html('');
+                $(`tr.${id}`).html('');
             }
         });
     }

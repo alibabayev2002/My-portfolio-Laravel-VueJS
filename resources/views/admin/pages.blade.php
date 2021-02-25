@@ -47,6 +47,7 @@
 @endsection
 @section('script')
 <script>
+
     $('#table_id').DataTable();
     $(".font").each(function (index) {
         $(this).addClass('selected-'+index);
@@ -63,11 +64,15 @@
         }, function (data) {
             if (data) {
                 $('tbody').append(`
-                    <td>null</td>
+                <tr class="${data['id']}">
+                    <td>${data['id']}</td>
                     <td>${name}</td>
-                    <td>null</td>
-                    <td>false</td>
-                    <td>saved..</td>
+                    <td><select><option></option></select></td>
+                    <td>${data['route']}</td>
+                    <td><input type="checkbox" onchange="editPage(${data['id']})" name=""
+                        {{$page->status ? 'checked' : ''}} id=""></td>
+                    <td><button class="btn btn-danger" onclick="deletePage(${data['id']})">Delete</button></td>
+                    </tr>
                 `)
             }
         });

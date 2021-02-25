@@ -49,7 +49,11 @@
 </head>
 <body>
         <main class="w-100 h-100 row mx-0 align-items-center justify-content-center">
+
                 <form action="{{route('admin.login.post')}}" method="post">
+                    @if(isset($test))
+                        <div class="alert alert-danger">{{$test}}</div>
+                    @endif
                     @csrf
                     <h1 class="text-center text-danger title">ADMIN PANEL LOGIN</h1>
                     <input name="username" type="text" placeholder="@username" name="" id="">

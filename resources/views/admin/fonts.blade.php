@@ -3,7 +3,7 @@
 <div class="row mx-0 justify-content-center px-3">
     <div class="row w-25 mx-0">
         <input type="text " placeholder="Font awesome" class="pl-3 mb-3 font form-control" name="" id="">
-        <select name="page" class="p-3 page form-control mb-3" id="">
+        <select name="page" class="page form-control mb-3" id="">
             @foreach ($pages as $page)
                             <option class="h-100" value="{{$page->id}}">{{$page->name}}</option>    
             @endforeach
@@ -24,13 +24,7 @@
         <tr class="{{$font->id}}">
             <td>{{$font->id}}</td>
             <td>{{$font->name}}</td>
-            <td><select name="" id="">
-
-                @foreach ($pages as $page)
-
-                    <option @if(count($page->fonts) > 0 && $page->fonts[0]->id ==$font->id) selected @endif value="{{$page->id}}">{{$page->name}}</option>    
-                @endforeach
-            </select></td>
+            <td class="text-danger">{{$font->page->name}}</td>
             <td><button class="btn btn-danger" onclick="deleteFont({{$font->id}})">Delete</button></td>
         </tr>
         @endforeach
@@ -46,10 +40,16 @@
     const addFont = (name,id) => {
         $.post('{{route("add.font")}}',{_token:'{{csrf_token()}}',name:name,id:id},function (data) {
             $('tbody').append(`
-                <td>null</td>
+            <tr class="${data['id']}">
+                <td>${data['id']}</td>
                 <td>${name}</td>
-                <td>null</td>
-                <td>Saved..</td>
+                <td class="text-danger">
+
+${data['page_name']}
+
+</td>
+<td><button class="btn btn-danger" onclick="deleteFont(${data['id']})">Delete</button></td>
+            </tr>
             `)
         });
     }

@@ -20,7 +20,8 @@ class FontController extends Controller
         $font->name=$request->name;
         $font->page_id=$request->id;
         $font->save();
-        return true;
+        $data = ['id'=>$font->id,'page_id'=>$request->id,'page_name'=>Page::where('id',$request->id)->first()->name];
+        return $data;
     }
     public function deleteFont(Request $request){
         Font::where('id',$request->id)->delete();

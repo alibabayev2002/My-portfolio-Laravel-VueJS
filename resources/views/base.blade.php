@@ -19,38 +19,19 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 
-<body class="{{ (request()->is('blog')) ? 'blog' : '' }}">
+<body>
+  <div class="black row mx-0 px-0">
+    </div>
     <div class="loader">
         <div class="back"></div>
         <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;opacity:1 !important;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+
     </div>
 
-    @if(!request()->is('blog'))
-
-    <div class="black row mx-0 px-0">
-    </div>
-    <div class="bird-container bird-container--one">
-        <div class="bird bird--one"></div>
-    </div>
-
-    <div class="bird-container bird-container--two">
-        <div class="bird bird--two"></div>
-    </div>
-
-    <div class="bird-container bird-container--three">
-        <div class="bird bird--three"></div>
-    </div>
-
-    <div class="bird-container bird-container--four">
-        <div class="bird bird--four"></div>
-    </div>
-    @endif
     <div class="sidebar">
+      
         <div>
             <a class="typing logo">./port<span>folyo</span></a>
             <a class=" logo typed-cursor">|</a>
@@ -86,7 +67,7 @@
                     <div class=" col-xl-8 pages mx-0 px-0 row justify-content-end align-items-center">
                         @foreach ($pages as $page)
                         @if($page->status)
-                            <a href="{{route(strtolower($page->route_name))}}" class="page-item row mx-0 align-items-center"><i class="fa fa-home mr-1 "></i> <span>{{$page->name}}</span></a>
+                            <a href="{{route(strtolower($page->route_name))}}" class="page-item row mx-0 align-items-center"><i class="{{$page->icon}} mr-1 "></i> <span>{{$page->name}}</span></a>
                           @endif  
                         @endforeach
                     </div>
@@ -109,23 +90,29 @@
     <script>
         setTimeout(function () {
             $('.loader').fadeOut();
-            var typed = new Typed(".typing-2", {
-                strings: ["Junior Web Developer'em"],
-                typeSpeed: 80,
-                backSpeed: 60,
-                loop: true
-            });
+            let i = 1;
+            setInterval(() => {
+                if(i>0.4){
+                    i -= 0.02;
+                    $('.black').css('opacity',i);
+                }
+                console.log($('.black').css('opacity'));
+                // console.log(test);
+        }, 100);
         }, 500);
-
+        
         $('.sidebar-button').on('click', function () {
             $('.sidebar').css('transform', 'translate(0%)');
         });
         $('.sidebar-close').on('click', function () {
             $('.sidebar').css('transform', 'translate(-100%)');
-        })
+        });
+        
+        
 
     </script>
     @yield('script')
 </body>
 
 </html>
+

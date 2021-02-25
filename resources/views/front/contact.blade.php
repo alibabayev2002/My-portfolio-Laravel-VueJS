@@ -1,13 +1,13 @@
 @extends('base')
 @section('content')
-    <div class="section row mx-0 px-5">
+    <div class="section row mx-0 px-md-5">
         <div class="section-content row justify-content-center align-items-center py-5">
             <h1 class="title">Əlaqə</h1>
             <div class="font-1 text-danger">
                 --
             </div>
-            <div class="col-12 row mx-0">
-                    <div class="col-md-6 col-12 row mx-0 font-2">
+            <div style="overflow-x:hidden; " class="col-12 row mx-0">
+                    <div class="col-md-6 col-12 px-0 px-md-3 row mx-0 font-2">
                         <table>
                             <tr>
                                 <td><i class="fas fa-user text-danger"></i></td>
@@ -35,8 +35,8 @@
                             </tr>
                         </table>
                     </div>
-                <div class="col-md-6 col-12 row mx-0">
-                    <form action="{{route('send.message')}}" method="post" class="row mx-0 justify-content-md-end justify-content-start mt-md-0 mt-5 align-items-center w-100">
+                <div class="col-md-6 col-12 px-0 px-md-3  row mx-0">
+                    <form action="{{route('send.message')}}" method="post" class="row mx-0 justify-content-md-end justify-content-center mt-md-0 mt-5 align-items-center w-100">
 @csrf
                     <table class="w-50">
                         <tr>
@@ -58,7 +58,6 @@
 @endsection
 @section('css')
 <style>
- 
     td{
         padding: 5px 10px;
     }
