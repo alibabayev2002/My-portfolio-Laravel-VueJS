@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div class="black row mx-0 px-0">
+  <div class="black row mx-0 px-0 tess">
     </div>
     <div class="loader">
         <div class="back"></div>
