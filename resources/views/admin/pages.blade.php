@@ -7,7 +7,7 @@
         <button class="btn btn-success mb-3 form-control" onclick="addPage($('.page').val(),$('.page-route').val())">Add
             page</button>
     </div>
-    <table id="table_id test-table" class="display w-100">
+    <table id="table_id" class="display w-100">
         <thead>
             <tr>
                 <th>id</th>
@@ -70,7 +70,7 @@
                     <td><select><option></option></select></td>
                     <td>${data['route']}</td>
                     <td><input type="checkbox" onchange="editPage(${data['id']})" name=""
-                        {{$page->status ? 'checked' : ''}} id=""></td>
+                         id=""></td>
                     <td><button class="btn btn-danger" onclick="deletePage(${data['id']})">Delete</button></td>
                     </tr>
                 `)
@@ -127,3 +127,4 @@
 
 </style>
 @endsection
+

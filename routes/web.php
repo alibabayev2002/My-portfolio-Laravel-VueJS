@@ -33,6 +33,7 @@ Route::post('/message/send',[MainController::class,'sendMessage'])->name('send.m
 
 Route::get('/blog',[BlogController::class,'index'])->name('blog');
 Route::get('/post/{slug}',[BlogController::class,'post'])->name('view.post');
+Route::get('/posts',[BlogController::class,'getPosts'])->name('get.posts');
 
 Route::get('/admin/login',[AdminController::class,'showLogin'])->name('login');
 Route::post('/admin/login',[AdminController::class,'login'])->name('admin.login.post');

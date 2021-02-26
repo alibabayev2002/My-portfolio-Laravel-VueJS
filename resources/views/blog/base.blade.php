@@ -20,45 +20,45 @@
 </head>
 
 <body>
-    {{-- <div class="loader">
-        <div class="back"></div>
-        <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;opacity:1 !important;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div> --}}
-
-
     <div class="wrapper">
         <header>
-            <div class="w-100">
-                <div class="row w-100 mx-0 px-3 ">
-                    <div class="col-12 row mx-0 justify-content-center px-0">
-                        <a class="typing text-dark logo">./blog</a>
-                        <a class=" logo typed-cursor text-danger ml-2 mr-2"> |</a>
-                        <a class=" logo text-muted">v1</a>
-                    </div>
-                    <div class=" col-12 pages mx-0 px-0 row justify-content-center align-items-center">
-                        <a href="{{route('home')}}" class="page-item text-danger"><i class="fas fa-caret-left"></i> Portfolyo</a>
-                        <a href="{{route('blog')}}" class="page-item active">Blog</a>
-                        {{-- <a href="{{route('about')}}" class="page-item">Hakkımda</a>
-                        <a href="{{route('projects')}}" class="page-item">İşlərim</a>
-                        <a href="{{route('skills')}}" class="page-item">Bacarıqlarım</a> --}}
-                        <a href="{{route('contact')}}" class="page-item">Əlaqə</a> 
-                    </div>
-                </div>
 
-            </div>
+              <div class="col-4 px-0 row mx-0">
+                <a href="{{route('blog')}}" class="  logo"> <i class="fas fa-cubes"></i> BLOG </a>
+
+              </div>
+<div class="col-4 text-center">
+    <i class="fas fa-theater-masks"></i> header
+</div>
+                        <div class="col-4 row mx-0 justify-content-end align-items-center">
+                            <button class="sidebar-btn btn text-white float-right">
+                                <i class="fas fa-bars"></i>
+        
+                                </button>
+                                <i class="fas fa-dolly test" style="font-size: 20px"></i>
+                        </div>
         </header>
+        <div class="sidebar">
+            <div class="w-100 pages mx-0 px-0 row justify-content-center align-items-center">
+                <button class="previous-btn btn text-white"><i class="fas fa-arrow-circle-left mr-2"></i> geri</button>
+                <a href="{{route('home')}}" class="sidebar-item"><i class="fas fa-briefcase"></i> Portfolyo</a>
+                <a href="{{route('blog')}}" class="sidebar-item active"><i class="fas fa-blog"></i>Blog</a>
+
+                <a href="{{route('about')}}" class="sidebar-item"><i class="fas fa-address-card"></i>Hakkımda</a>
+                <a href="{{route('projects')}}" class="sidebar-item"><i class="fas fa-umbrella-beach"></i> İşlərim</a>
+                <a href="{{route('skills')}}" class="sidebar-item"><i class="fas fa-fill-drip"></i> Bacarıqlarım</a>
+                <a href="{{route('contact')}}" class="sidebar-item"><i class="fas fa-address-card"></i>Əlaqə</a> 
+            </div>
+        </div>
         <main>
             @yield('content')
         </main>
 
-        <footer>Created by Babayev | © Bütün hüqüqlar qorunur.</footer>
+        {{-- <footer>Created by Babayev | © Bütün hüqüqlar qorunur.</footer> --}}
 
     </div>
+    @yield('script')
+
     <script>
         setTimeout(function () {
             $('.loader').fadeOut();
@@ -68,6 +68,12 @@
             //     backSpeed: 60,
             //     loop: true
             // });
+            $('.sidebar-btn').click(function () {
+                $('.sidebar').css('transform','translatex(0%)');
+            });
+            $('.previous-btn').click(function () {
+                $('.sidebar').css('transform','translatex(-100%)');
+            });
         }, 500);
 
         // $('.sidebar-button').on('click', function () {
@@ -78,7 +84,6 @@
         // })
 
     </script>
-    @yield('script')
 </body>
 
 </html>

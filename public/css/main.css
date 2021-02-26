@@ -14,7 +14,7 @@ html,
 body {
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
     /* background: #2d3436; */
-    background: url("http://127.0.0.1:8000/img/ali.jpg") no-repeat center;
+    background: url("/img/ali.jpg") no-repeat center;
     /* background-color: black; */
     background-size: 100% 100%;
     width: 100%;
