@@ -3,11 +3,68 @@
 
 <div class="skills-content section row mx-0  ">
     <div class="section-content bg-white py-1">
-        <h1 class="title font-3 text-primary mb-4">Bacarıqlarım</h1>
+        {{-- <h1 class="title font-3 text-primary mb-4">Bacarıqlarım</h1> --}}
+        <div class="w-100 px-3">
+            <div class="sec-title">
+                <span class="hashtag mr-1">#</span> <span>Vəzifələrim</span>
+            </div>
+            <div class="positions row mx-0 w-100 p-0 justify-content-start">
+                <div class="col-md-4 col-12 p-2">
+                    <div class="position">
+                            <div class="title">
+                                <span>Front end developer</span>
+                            </div>
+                            <div class="position-logo w-100">
+                                <i class="fab fa-black-tie"></i>
+                            </div>
+                            <div class="position-content">
+                                <span>
+                                   Dillər : JavaScript(VueJS,Ajax),HTML,CSS(SASS,BOOTSTRAP)
+                                </span>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 p-2">
+                    <div class="position">
+                            <div class="title">
+                                <span>Back end developer</span>
+                            </div>
+                            <div class="position-logo w-100">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="position-content">
+                                <span>
+                                   Dillər : PHP(LARAVEL) , SQL , MYSQL , POSTGRESQL , Firebase 
+                                </span>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 p-2">
+                    <div class="position">
+                            <div class="title">
+                                <span>Web designer</span>
+                            </div>
+                            <div class="position-logo w-100">
+                                <i class="fas fa-tape"></i>
+                            </div>
+                            <div class="position-content">
+                                <span>
+                                   Photoshop , Coreldraw zad dagid
+                                </span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 px-3">
+            <div class="sec-title">
+                <span class="hashtag mr-1">#</span> <span>Bacarıqlarım</span>
+            </div>
+        </div>
         <div class="content row mx-0 w-100">
-            <div class="col-md-7 col-12 row mx-0  align-items-center mb-5">
+            <div class="col-md-7 col-12 px-0 row mx-0  align-items-center mb-5 mb-md-0">
                 <div class="col-12">
-                    <b class="text-danger font-2"> Bacarıqlarım haqqında</b><br>
+                    <b class="text-main font-2"> Bacarıqlarım haqqında</b><br>
                     Portfolyomda ve githubda olan işlərim ilə müəyyən qədər təcrübəyə malikəm. Daim yeni şeylər öyrənməyə çalışıram və bu gördüyünüz biliklər üzrə özümü inkişaf etdirməyə təcrübə sahibi olmağa çalışıram..
                 </div>
             </div>
@@ -18,26 +75,18 @@
                         - {{$skill->name}}
                     </div>
                     <div class="progress w-100 p-0 m-0">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{$skill->level}}%;"
+                        <div class="progress-bar bg-main" role="progressbar" style="width: {{$skill->level}}%;"
                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{$skill->level}}%</div>
                     </div>
                 </div>
 
                 @endforeach
 
-
-
-
-                {{-- <div class="text-danger col-12 text-center"><i class="fab fa-css3-alt"></i> CSS(SASS,BOOTSTRAP)</div>
-                     <div class="color-main col-12 text-center"><i class=" text-warning fab fa-js"></i> JAVASCRIPT(JQUERY,AJAX,VUEJS)</div>
-                     <div class="col-12 text-center"><i class="fab fa-php"></i> PHP(LARAVEL)</div>
-                     <div class="col-12 text-primary text-center"><i class="fab fa-python"></i> PYTHON(DJANGO)</div>
-                     <div class="col-12 text-success text-center"><i class="fas fa-database"></i> MYSQL,POSTGRESQL,FIREBASE ,...</div>
-                     <div><i class="fas fa-code-branch"></i> GIT(VERSION CONTROL)</div> --}}
             </div>
+           
         </div>
     </div>
 
 </div>
 @endsection
-
+@section('title','Bacarıqlarım - Babayev Əli')

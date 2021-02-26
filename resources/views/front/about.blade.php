@@ -27,9 +27,4 @@
 
 </div>
 @endsection
-@section('script')
-<script>
-
-</script>
-@endsection
-
+@section('title','Hakkımda - Babayev Əli')

@@ -39,3 +39,4 @@
 </div>
     
 @endsection
+@section('title',$post->title)

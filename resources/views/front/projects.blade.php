@@ -1,66 +1,161 @@
 @extends('base')
 @section('content')
 
-<div class="projects section row mx-0 justify-content-center align-items-center h-100">
+<div class="projects section">
     <div class="section-content bg-white">
-        <h1 class="title mt-3 mb-0">İşlərim</h1><br>
-        <div id="carouselExampleIndicators" class="carousel slide w-100 mt-0 mb-5" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators " data-slide-to="0" class="active bg-dark"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bg-dark"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bg-dark"></li>
-            </ol>
-            <div class="carousel-inner w-100">
-                <div class="carousel-item active py-2">
-                    <div class="row mx-0 justify-content-center mb-5 mt-5 align-items-center">
-                        <div class="col-12 text-center"><b>BLOG</b></div>
-                        <div style="width: 100px;height:100px;">
-                            <img src="{{asset('img/blog.png')}}" width="100%" alt="">
-                        </div>
-                        <div style="font-size: 15px" class="text-center col-12">
-                            Bu portfolio saytini yazarkən düşündüm ki əlavə olaraq back-end biliklərimi bir qədər subut etmək üçün simple blog yazım.
-                            <a href="{{route('blog')}}">Blog</a> 'a keçid etmək istəyirsənizsə tıklayın.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center  px-5 py-2">
-                    <div class="row mx-0 justify-content-center mb-5 mt-5 align-items-center">
-                        <div class="col-12 text-center"><b>Front end</b></div>
-                        <div style="width: 100px;height:100px;">
-                            <img src="{{asset('img/front.png')}}" width="100%" alt="">
-                        </div>
-                        <div style="font-size: 15px" class="text-center col-12">
-                            Front endə aid bir neçə tasklar yerinə yetirib bu modula yerləşdirəcəm.Hələki bu hissə tam hazır deil.Hazır olduqda sayta yüklənəcəkdir.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center  px-5 py-2">
-                    <div class="row mx-0 justify-content-center mb-5 mt-5 align-items-center">
-                        <div class="col-12 text-center"><b>Github</b></div>
-                        <div style="width: 100px;height:100px;">
-                            <img src="{{asset('img/github.png')}}" width="100%" alt="">
-                        </div>
-                        <div style="font-size: 15px" class="text-center col-12">
-                            Bir qədər etdiyim işləri(taskları) github hesabıma yükləmişəm(həmçinin bu saytıda).Bacarıqlarımı dahada incələmək üçün <a href="">Github</a> hesabıma bax bilərsiniz
-                        </div>
-                    </div>
-                </div>
-
+        <div class="w-100 px-2">
+            <div class="sec-title">
+                <span class="hashtag mr-1">#</span> <span>İŞLƏRİM</span>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded p-3" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded p-3" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <h3 class="text-center">Portfolyo saytinin admin paneli hakkinda</h3>
+        <div class="projects row mx-0 w-100 p-0 justify-content-start">
+            <div class="col-md-4 col-12 p-2">
+                <div data-link="http://www.alibabayev.site/blog" class="project">
+                        <div class="title">
+                            <span>BLOG(portfolio)</span>
+                        </div>
+                        <div class="project-logo w-100">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="project-content">
+                            <span>
+                            Bu həm portfolio saytimizla bağlı yenilikləri həm də bir növ bacarıqlarımı göstərmək üçün yazılmış blogdur.<br>Istifadə edilmiş texnologiya : PHP(laravel),VueJS
+                            </span>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-2">
+                <div data-link="http://www.alibabayev.site/" class="project">
+                        <div class="title">
+                            <span>Portfolio</span>
+                        </div>
+                        <div class="project-logo w-100">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="project-content">
+                            <span>
+                            Öz IT bacarıqlarımı sübüt etmək üçün yazılmış portfolio saytdır.
+                            <br>Istifadə edilmiş texnologiya : PHP(laravel),VueJS</span>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://github.com/alibabayev2002/simongame" class="project">
+                    <div class="title">
+                       <span> SIMON GAME</span>
+                    </div>
+                        <div class="project-logo w-100">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        
+                    <div class="project-content">
+                        <span>
+                        Bekar olarkən vue js istifadə edilərək yazılmış simon game adlanan oyun <br>Istifadə edilmiş texnologiya : VueJS
+                        </span></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://alibabayev.ru" class="project">
+                    <div class="title">
+                        <span>BLOG(tech. blog)</span>
+                    </div>
+                    <div class="project-logo w-100">
+                        <i class="fas fa-blog"></i>
+                        
+                    </div>
+                    <div class="project-content">
+                        <span>
+                        2020 ci ildə texnoloji paylaşımlar üçün yazdığım blog.<br>Istifadə edilmiş texnologiya : PHP(laravel),VueJS
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://github.com/alibabayev2002/collision-game-js" class="project">
+                    <div class="title">
+                        <span>Collision game</span>
+                    </div>
+                    <div class="project-logo w-100">
+                        <i class="fas fa-gamepad"></i>
+                        
+                    </div>
+                    <div class="project-content">
+                        <span>
+                        Bekar olarkən sadəcə JavaScript istifadə edilərək yazılan bir minigame.<br>Istifadə edilmiş texnologiya : JavaScript
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://github.com/alibabayev2002/school_modals---laravel-php" class="project">
+                    <div class="title">
+                        <span>E-School</span>
+                    </div>
+                    <div class="project-logo w-100">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <span>
+                        4 Moduldan ibarət məktəb(üniversitet) etr sisteminə nümünə.<br>Istifadə edilmiş texnologiya : PHP(laravel)
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://github.com/alibabayev2002/EmailSenderApplication---laravel-php" class="project">
+                    <div class="title">
+                        <span>Email sender application</span>
+                    </div>
+                    <div class="project-logo w-100">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="project-content">
+                        <span>
+                        Saytda qeydiyyatdan keçmiş userlərin email hesablarına adminin qeyd etdiyi vaxtda periodik olaraq mesajin göndərilməsi üçün yazılmış ETR sistem.<br>Istifadə edilmiş texnologiya : PHP(laravel),VueJS
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 p-0 p-2">
+                <div data-link="https://github.com/alibabayev2002/" class="project">
+                    <div class="title">
+                        <span>Github hesabım</span>
+                    </div>
+                    <div class="project-logo w-100">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="project-content">
+                        <span>
+                        Açmış olduğum bu github hesabımda gördüyüm bir çox işləri paylaşıram<br>
+                        Github username : alibabayev2002
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 px-2">
+            <div class="sec-title">
+                <span class="hashtag mr-1">#</span> <span>Portfolyo saytinin admin paneli hakkinda</span>
+            </div>
+            <div class="text-muted">
+                yaxın zamanda yerləştiriləcək...
+            </div>
+        </div>
     </div>
 </div>
 
 @endsection
 
+@section('script')
+    
+<script>
+
+    $('.project').click(function(){
+        // alert('sa');
+        let link =  $(this).data('link');
+        window.location.replace(link);
+    });
+</script>
+@endsection
+@section('title','İşlərim - Babayev Əli')

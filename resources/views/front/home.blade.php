@@ -11,7 +11,7 @@
             <div class="text-2 w-100">
                 Əli Babayev!
             </div>
-            <div class="text-3 w-100 mb-4">
+            <div class="text-3 w-100 mb-md-3 mb-2">
                 Mən
                 <span class="typing-2 "></span>
             </div>
@@ -45,4 +45,4 @@ setTimeout(() => {
 </script>
     
 @endsection
-
+@section('title','Babayev Əli - Web developer')

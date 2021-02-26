@@ -66,3 +66,5 @@
 </style>
     
 @endsection
+
+@section('title','Blog')
