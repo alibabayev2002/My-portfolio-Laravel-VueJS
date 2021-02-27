@@ -28,7 +28,7 @@
 
               </div>
 <div class="col-4 text-center">
-    <i class="fas fa-theater-masks"></i> header
+    <i class="fas fa-theater-masks"></i> ALİBABAYEV.SİTE
 </div>
                         <div class="col-4 row mx-0 justify-content-end align-items-center">
                             <button class="sidebar-btn btn text-white float-right">
@@ -42,9 +42,8 @@
             <div class="w-100 pages mx-0 px-0 row justify-content-center align-items-center">
                 <button class="previous-btn btn text-white"><i class="fas fa-arrow-circle-left mr-2"></i> geri</button>
                 <a href="{{route('home')}}" class="sidebar-item"><i class="fas fa-briefcase"></i> Portfolyo</a>
-                <a href="{{route('blog')}}" class="sidebar-item active"><i class="fas fa-blog"></i>Blog</a>
-
                 <a href="{{route('about')}}" class="sidebar-item"><i class="fas fa-address-card"></i>Hakkımda</a>
+                <a href="{{route('blog')}}" class="sidebar-item active"><i class="fas fa-blog"></i>Blog</a>
                 <a href="{{route('projects')}}" class="sidebar-item"><i class="fas fa-umbrella-beach"></i> İşlərim</a>
                 <a href="{{route('skills')}}" class="sidebar-item"><i class="fas fa-fill-drip"></i> Bacarıqlarım</a>
                 <a href="{{route('contact')}}" class="sidebar-item"><i class="fas fa-address-card"></i>Əlaqə</a> 

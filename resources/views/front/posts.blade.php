@@ -11,7 +11,7 @@
             {{Illuminate\Support\Str::limit(($post->content), 150, ' dəvamı üçün klikləyin...')}}
         </div>
         <div class="text-muted w-100">
-            {{$post->view}} <i class="fa fa-eye mr-2"></i>  {{$post->created_at->diffForHumans()}} <i class="far fa-clock"></i> 
+            {{$post->views}} <i class="fa fa-eye mr-2"></i>  {{$post->created_at->diffForHumans()}} <i class="far fa-clock"></i> 
     
         </div>
 </div>

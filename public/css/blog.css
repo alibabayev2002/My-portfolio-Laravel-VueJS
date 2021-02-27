@@ -1,108 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    /* font-family: 'Lexend Deca', sans-serif; */
-    font-family: 'Nunito Sans', sans-serif;
-
-}
-body{
-    background-color: #f8fafc;
-}
-a:hover{
-    text-decoration: none;
-}
-html,
-.flex {
-    height: 100vh;
-}
-.wrapper{
-    min-height: 100%;
-}
-.logo {
-    margin: 0;
-    font-weight: bold;
-    padding: 0;
-    font-size: 25px;
-    color: #c7ecee;
-    /* text-shadow: 1px 1px 1px white; */
-    width: 300px;
-    text-align: center;
-}
-.logo:hover{
-    color: #c7ecee;
-}
-.logo span {
-    /* color: red; */
-}
-
-header {
-    /* padding: 20px 10px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-    /* padding-left: 310px; */
-    z-index: 22121;
-    /* background-color: white; */
-    z-index: 5;
-    color: white;
-    background-color: #4f5a6e;
-    /* background-color: transparent; */
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-}
-.sidebar{
-    /* z-index: 10; */
-    /* padding-top: 50px; */
-    position: fixed;
-    transform: translateX(0%); 
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 300px;
-    background-color: #4f5a6e;
-    padding-top: 50px;
-
-    /* justify-content: center; */
-
-}
-a.sidebar-item {
-    text-transform: lowercase;
-    font-size: 17px;
-    /* font-weight: bold; */
-    color: white;
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-a.sidebar-item i{
-    position: absolute;
-    right: 19px;
-    transform: translateX(-50%);
-}
-a.sidebar-item.active{
-    background-color: #424b5f;
-    box-sizing: border-box;
-    border-left: 2px solid blue;
-}
-a.sidebar-item:hover{
-    opacity: .7;
-}
 main{
     padding-top: 100px;
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
-    /* min-height: 100vh; */
+    min-height: 100vh;
     /* padding: 30px 190px; */
     padding-left: 400px !important;
     padding-right: 120px;
@@ -118,12 +20,6 @@ main{
 .blog-head .img-div{
     height: 280px;
     width: 100%;
-}
-.typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
 }
 .blog-body{
     padding-top: 20px;
@@ -178,7 +74,7 @@ footer{
     display: none;
 }
 .page-link.active{
-    background-color: #3498db;
+    background-color: #4f5a6e;
     color: white;
 }
 @media only screen and (max-width: 1200px) {
@@ -199,29 +95,13 @@ footer{
     .content-text{
         font-size: 7px;
     }
-    .previous-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .sidebar {
-        transform: translateX(-100%);
-        transition: 500ms all;
-        width: 100%;
-        z-index: 555;
-    }
+
     .logo{
         width: auto;
     }
 
     .sidebar-btn{
         display: block;
-    }
-    main{
-       padding: 80px 20px !important;
-    }
-    header{
-        padding-left: 30px !important;
     }
 }
 @media only screen and (min-width: 1200px) and  (max-width: 1650px){
@@ -244,68 +124,3 @@ footer{
     }
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-.loader {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader .back {
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    z-index: 66;
-    opacity: .8;
-}
-
-.loader .spinner-grow,
-.loader .spinner-border {
-    z-index: 80;
-}

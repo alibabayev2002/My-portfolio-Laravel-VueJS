@@ -22,13 +22,7 @@
 <body>
   <div class="black row mx-0 px-0 tess">
     </div>
-    <div class="loader">
-        <div class="back"></div>
-        <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;opacity:1 !important;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
 
-    </div>
 
     <div class="sidebar">
       
@@ -36,7 +30,6 @@
             <a class="typing logo">./port<span>folyo</span></a>
             <a class=" logo typed-cursor">|</a>
             <a class=" logo text-muted">v1</a>
-            <br><br><br><br><br><br><br>
         </div>
         <div class="sidebar-close">
             <i style="font-size: 35px;color:white;" class="fas fa-arrow-circle-left"></i>

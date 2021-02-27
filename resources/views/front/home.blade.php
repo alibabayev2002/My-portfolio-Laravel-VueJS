@@ -16,7 +16,7 @@
                 <span class="typing-2 "></span>
             </div>
             <div class="text-4 w-100">
-                <a href="{{asset('files/CV.pdf')}}" download class="hover-button btn btn-danger px-4 mr-2" data-hover="YÜKLƏ!">
+                <a href="{{asset('files/ali.pdf')}}" download class="hover-button btn btn-danger px-4 mr-2" data-hover="YÜKLƏ!">
                     <div><i class="fa fa-download text-white"></i> CV</div>
                 </a>
                 <a href="{{route('contact')}}" class="hover-button btn btn-success px-4" data-hover="KEÇ!">
