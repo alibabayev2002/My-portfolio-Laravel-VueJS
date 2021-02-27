@@ -5,7 +5,7 @@
     </div>
     
             <a style="word-break: break-all" href="{{route('view.post',$post->slug)}}" class="post-title text-left text-dark">
-                {{Illuminate\Support\Str::limit(($post->content), 80, ' ...')}}
+                {{Illuminate\Support\Str::limit(($post->title), 80, ' ...')}}
             </a>
         <div class="post-content text-muted" style="word-break: break-all">
             {{Illuminate\Support\Str::limit(($post->content), 150, ' dəvamı üçün klikləyin...')}}

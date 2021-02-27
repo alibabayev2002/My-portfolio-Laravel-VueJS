@@ -154,7 +154,7 @@
     $('.project').click(function(){
         // alert('sa');
         let link =  $(this).data('link');
-        window.location.replace(link);
+        window.location.href = link;
     });
 </script>
 @endsection

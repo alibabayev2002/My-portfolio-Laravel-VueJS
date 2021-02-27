@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     word-wrap: break-word;
     word-break: break-all;
 
@@ -16,8 +17,6 @@ html,
     height: 100vh;
 }
 body {
-    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
-    /* background: #2d3436; */
     background: url("/img/ali.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -380,73 +379,6 @@ main {
 }
 
 
-@media only screen and (max-width: 1200px) {
-    .blog{
-        padding: 0px !important;
-    }
-  header{
-    padding:20px;
-  }
-  .skills-content{
-        padding: 10px !important;
-    }
-    .pages {
-        display: none !important;
-    }
-
-    .sidebar-icon {
-        display: flex !important;
-    }
-
-    .text-1 {
-        font-size: 23px;
-    }
-    
-    .text-2 {
-        font-size: 38px;
-    }
-    
-    .text-3 {
-        font-size: 25px;
-    }
-   
-
-}
-@media only screen and (max-width: 800px) {
-    header{
-      padding:20px;
-    }
-    .skills-content{
-          padding: 10px !important;
-      }
-      .pages {
-          display: none !important;
-      }
-  
-      .sidebar-icon {
-          display: flex !important;
-      }
-  
-      .text-1 {
-        font-size: 15px;
-    }
-    
-    .text-2 {
-        font-size: 30px;
-    }
-    
-    
-    .text-3 {
-        font-size: 18px;
-    }
-    .text-4 .btn{
-        padding: 5px 10px !important;
-        font-size: 10px;
-    }
-  
-  }
-
-
 
 .typed-cursor {
     opacity: 1;
@@ -583,42 +515,6 @@ main {
     background-color: #4f5a6e;
     color: white;
 }
-
-@media only screen and (max-width: 1200px) {
-    .logo{
-        font-size: 20px;
-    }
-    .post-view .col-12 .div-img{
-        width: 100%;
-        height: 400px;
-       }
-    .test{
-        display: none !important;
-    }
-
-    .title-text{
-        font-size: 13px;
-    }
-    .content-text{
-        font-size: 7px;
-    }
-
+.page-link{
+    color:black;
 }
-@media only screen and (min-width: 1200px) and  (max-width: 1650px){
-
-    .title-text{
-        font-size: 24px !important;
-    }
-    .content-text{
-        font-size: 15px !important;
-    }
-}
-@media only screen and (max-width: 1650px) {
-    .title-text{
-        font-size: 20px;
-    }
-    .content-text{
-        font-size: 10px;
-    }
-}
-

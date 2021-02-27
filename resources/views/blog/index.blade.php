@@ -31,7 +31,7 @@
         <div class="blog-body row mx-0 w-100 justify-content-between px-3">
             
         </div>
-    <div class="px-3">
+    <div class="px-3 py-3">
         {{$posts->links('paginator')}}
     
     </div>
@@ -41,7 +41,7 @@
 @endsection
 @section('script')
 <script>
-    let url ="http://127.0.0.1:8000/posts?page=";
+    let url ="/posts?page=";
     let page = 1;
     fetch_data(page);
     $(document).on('click', '.pagination a', function(event){

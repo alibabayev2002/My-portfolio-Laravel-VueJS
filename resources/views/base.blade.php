@@ -17,15 +17,28 @@
     <script src="{{asset('js/app.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        const responsiveTrigger = () => {
+            if ($(window).width() <= 1200) {
+                $('head').append(`<link rel="stylesheet" href="{{asset('css/mobile.css')}}">`);
+            }
+        }
+        responsiveTrigger();
+        $(window).resize(function () {
+            responsiveTrigger();
+        });
+
+    </script>
 </head>
 
 <body>
-  <div class="black row mx-0 px-0 tess">
+    <div class="black row mx-0 px-0 tess">
     </div>
 
 
     <div class="sidebar">
-      
+
         <div>
             <a class="typing logo">./port<span>folyo</span></a>
             <a class=" logo typed-cursor">|</a>
@@ -36,10 +49,11 @@
         </div>
         <div class="sidebar-items">
             @foreach ($pages as $page)
-                @if($page->status)
-                <a href="{{route(strtolower($page->route_name))}}" class="sidebar-item w-100"><i class="{{$page->icon}} float-left px-3"></i> <span
+            @if($page->status)
+            <a href="{{route(strtolower($page->route_name))}}" class="sidebar-item w-100"><i
+                    class="{{$page->icon}} float-left px-3"></i> <span
                     class=" float-right px-2">{{$page->name}}</span></a>
-                @endif  
+            @endif
             @endforeach
         </div>
     </div>
@@ -60,8 +74,10 @@
                     <div class=" col-xl-8 pages mx-0 px-0 row justify-content-end align-items-center">
                         @foreach ($pages as $page)
                         @if($page->status)
-                            <a href="{{route(strtolower($page->route_name))}}" class="page-item row mx-0 align-items-center"><i class="{{$page->icon}} mr-1 "></i> <span>{{$page->name}}</span></a>
-                          @endif  
+                        <a href="{{route(strtolower($page->route_name))}}"
+                            class="page-item row mx-0 align-items-center"><i class="{{$page->icon}} mr-1 "></i>
+                            <span>{{$page->name}}</span></a>
+                        @endif
                         @endforeach
                     </div>
                 </div>
@@ -85,27 +101,23 @@
             $('.loader').fadeOut();
             let i = 1;
             setInterval(() => {
-                if(i>0.4){
+                if (i > 0.4) {
                     i -= 0.02;
-                    $('.black').css('opacity',i);
+                    $('.black').css('opacity', i);
                 }
-                console.log($('.black').css('opacity'));
                 // console.log(test);
-        }, 100);
+            }, 100);
         }, 500);
-        
+
         $('.sidebar-button').on('click', function () {
             $('.sidebar').css('transform', 'translate(0%)');
         });
         $('.sidebar-close').on('click', function () {
             $('.sidebar').css('transform', 'translate(-100%)');
         });
-        
-        
 
     </script>
     @yield('script')
 </body>
 
 </html>
-
